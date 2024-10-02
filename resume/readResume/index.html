@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Creation Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Create Your CV</h1>
+        <form id="cv-form">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address">
+            </fieldset>
+
+            <!-- Education -->
+            <fieldset>
+                <legend>Education</legend>
+                <div id="education-container">
+                    <div class="education-entry">
+                        <label for="degree-1">Degree:</label>
+                        <input type="text" id="degree-1" name="degree-1" required>
+
+                        <label for="institution-1">Institution:</label>
+                        <input type="text" id="institution-1" name="institution-1" required>
+
+                        <label for="year-of-graduation-1">Year of Graduation:</label>
+                        <input type="number" id="year-of-graduation-1" name="year-of-graduation-1" required>
+                    </div>
+                </div>
+                <button type="button" id="add-education">Add More Education</button>
+            </fieldset>
+
+            <!-- Experience -->
+            <fieldset>
+                <legend>Work Experience</legend>
+                <div id="experience-container">
+                    <div class="experience-entry">
+                        <label for="job-title-1">Job Title:</label>
+                        <input type="text" id="job-title-1" name="job-title-1" required>
+
+                        <label for="company-1">Company:</label>
+                        <input type="text" id="company-1" name="company-1" required>
+
+                        <label for="job-duration-1">Duration (e.g., Jan 2020 - Dec 2021):</label>
+                        <input type="text" id="job-duration-1" name="job-duration-1" required>
+
+                        <label for="job-description-1">Job Description:</label>
+                        <textarea id="job-description-1" name="job-description-1" rows="4" required></textarea>
+                    </div>
+                </div>
+                <button type="button" id="add-experience">Add More Experience</button>
+            </fieldset>
+
+            <!-- Skills -->
+            <fieldset>
+                <legend>Skills</legend>
+                <label for="skills">List your skills (comma-separated):</label>
+                <input type="text" id="skills" name="skills">
+            </fieldset>
+
+            <!-- Profile Picture -->
+            <fieldset>
+                <legend>Profile Picture</legend>
+                <label for="profile-pic">Upload Profile Picture:</label>
+                <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+            </fieldset>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit CV</button>
+        </form>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
